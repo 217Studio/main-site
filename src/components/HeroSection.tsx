@@ -56,7 +56,7 @@ export default function HeroSection() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 212, 255, ${p.opacity})`;
+        ctx.fillStyle = `rgba(255, 98, 0, ${p.opacity})`;
         ctx.fill();
 
         // Draw connections
@@ -69,7 +69,7 @@ export default function HeroSection() {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(0, 212, 255, ${0.08 * (1 - dist / 150)})`;
+            ctx.strokeStyle = `rgba(255, 98, 0, ${0.08 * (1 - dist / 150)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
