@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "217 Studio | Game & Software Development | Demo",
+  title: "217 Studio | Game & Software Development",
   description:
     "217 Studio - Nhóm phát triển game và phần mềm sáng tạo. Chúng tôi tạo ra những sản phẩm game và phần mềm chất lượng, đột phá.",
   keywords: ["217 Studio", "game development", "software development", "indie studio", "Vietnam"],
