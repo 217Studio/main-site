@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { Code, ExternalLink, Globe } from "lucide-react";
 
 const teamMembers = [
-  { name: "Thành viên 1", role: "Team Leader / Full-stack Developer", bio: "Đam mê xây dựng sản phẩm từ ý tưởng đến hiện thực. Chuyên về kiến trúc phần mềm và game design.", avatar: "TL", color: "from-[var(--primary)] to-cyan-400", socials: { github: "#", linkedin: "#" } },
+  { name: "Nguyễn Đức Anh", role: "Team Leader / Full-stack Developer", bio: "Đam mê xây dựng sản phẩm từ ý tưởng đến hiện thực. Chuyên về kiến trúc phần mềm và game design.", avatar: "TL", color: "from-[var(--primary)] to-cyan-400", socials: { github: "#", linkedin: "#" } },
   { name: "Thành viên 2", role: "Game Developer", bio: "Chuyên gia về Unity/Unreal Engine. Có kinh nghiệm phát triển gameplay mechanics và AI systems.", avatar: "GD", color: "from-[var(--secondary)] to-purple-400", socials: { github: "#", linkedin: "#" } },
   { name: "Thành viên 3", role: "Frontend Developer", bio: "Tạo ra giao diện đẹp mắt và trải nghiệm người dùng mượt mà. Chuyên React, Next.js và modern CSS.", avatar: "FE", color: "from-[var(--accent)] to-emerald-400", socials: { github: "#", linkedin: "#" } },
   { name: "Thành viên 4", role: "Backend Developer", bio: "Xây dựng hệ thống backend mạnh mẽ, scalable. Chuyên về API design, databases và cloud services.", avatar: "BE", color: "from-amber-400 to-orange-400", socials: { github: "#", linkedin: "#" } },
