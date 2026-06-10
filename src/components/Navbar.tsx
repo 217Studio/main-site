@@ -3,14 +3,15 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 const navLinks = [
-  { href: "#home", label: "Trang chủ" },
-  { href: "#about", label: "Giới thiệu" },
-  { href: "#team", label: "Thành viên" },
-  { href: "#projects", label: "Dự án" },
-  { href: "#tech", label: "Công nghệ" },
-  { href: "#contact", label: "Liên hệ" },
+  { href: "/#home", label: "Trang chủ" },
+  { href: "/#about", label: "Giới thiệu" },
+  { href: "/#team", label: "Thành viên" },
+  { href: "/#projects", label: "Dự án" },
+  { href: "/#tech", label: "Công nghệ" },
+  { href: "/#contact", label: "Liên hệ" },
 ];
 
 export default function Navbar() {
@@ -38,26 +39,26 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2 group">
+        <Link href="/#home" className="flex items-center gap-2 group">
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] flex items-center justify-center font-bold text-white text-sm group-hover:shadow-lg group-hover:shadow-[var(--glow-primary)] transition-shadow duration-300">
             217
           </div>
           <span className="text-xl font-bold bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text text-transparent">
             Studio
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-sm text-gray-400 hover:text-[var(--primary)] transition-colors duration-300 relative group"
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] group-hover:w-full transition-all duration-300" />
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -83,17 +84,20 @@ export default function Navbar() {
           >
             <div className="flex flex-col py-4">
               {navLinks.map((link, index) => (
-                <motion.a
+                <motion.div
                   key={link.href}
-                  href={link.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="px-6 py-3 text-sm text-gray-400 hover:text-[var(--primary)] hover:bg-white/5 transition-all duration-300"
                 >
-                  {link.label}
-                </motion.a>
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block px-6 py-3 text-sm text-gray-400 hover:text-[var(--primary)] hover:bg-white/5 transition-all duration-300"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </motion.div>
