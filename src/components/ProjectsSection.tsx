@@ -35,7 +35,7 @@ export default function ProjectsSection() {
   // Fetch projects from backend
   useEffect(() => {
     const API_BASE_URL =
-      process.env.NEXT_PUBLIC_API_URL || "http://api.217studio.id.vn/api";
+      process.env.NEXT_PUBLIC_API_URL || "https://api.217studio.id.vn/api";
 
     fetch(`${API_BASE_URL}/projects`)
       .then((res) => res.json())
@@ -125,7 +125,7 @@ export default function ProjectsSection() {
           >
             {/* Background Image */}
             {project.thumbnail_url ? (
-              <div 
+              <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: `url(${project.thumbnail_url})` }}
               />
@@ -143,7 +143,7 @@ export default function ProjectsSection() {
         <div className="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 py-20">
           <div className="max-w-2xl">
             <AnimatePresence mode="wait">
-              <motion.div 
+              <motion.div
                 key={currentIndex}
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -164,11 +164,11 @@ export default function ProjectsSection() {
                     </span>
                   </div>
                 </div>
-                
+
                 <h3 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed drop-shadow-md">
                   {project.short_description || "Chưa có mô tả"}
                 </p>
@@ -214,8 +214,8 @@ export default function ProjectsSection() {
               {projects.map((p, idx) => {
                 const g = PROJECT_GRADIENTS[idx % PROJECT_GRADIENTS.length];
                 return (
-                  <button 
-                    key={p.id} 
+                  <button
+                    key={p.id}
                     onClick={() => setCurrentIndex(idx)}
                     className={`flex-1 h-1.5 rounded-full overflow-hidden relative ${idx === currentIndex ? "bg-white/20" : "bg-white/5 hover:bg-white/10"} transition-colors`}
                   >

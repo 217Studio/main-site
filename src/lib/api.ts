@@ -1,7 +1,7 @@
 import type { ApiResponse, Member, Project } from "./types";
 
 const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "http://api.217studio.id.vn/api";
+  process.env.NEXT_PUBLIC_API_URL || "https://api.217studio.id.vn/api";
 
 /**
  * Lấy danh sách thành viên active từ backend
