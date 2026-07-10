@@ -52,7 +52,7 @@ export default function TeamSection() {
 
   useEffect(() => {
     const API_BASE_URL =
-      process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api";
+      process.env.NEXT_PUBLIC_API_URL || "http://api.217studio.id.vn/api";
 
     fetch(`${API_BASE_URL}/users`)
       .then((res) => res.json())
